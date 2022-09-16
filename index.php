@@ -12,11 +12,16 @@
 					<p>
 						Солидный и уважаемый заказчик всегда в праве рассчитывать на сотрудничество с надежным и профессиональным партнером.
 					</p>
-					<a href="#"><img src="src/logo_akfo.svg" alt=""></a>
-					<a href="#"><img src="src/logo_nod.svg" alt=""></a>
+					<a href="https://xn--80aumx.xn--p1ai" target="_blank"><img src="src/logo_akfo.svg" alt=""></a>
+					<a href="https://www.nod.su" target="_blank"><img src="src/logo_nod.svg" alt=""></a>
 				</div>
 			</div>
-		</section>
+		</section> <!-- intro -->
+
+		<?php include_once "blocks/thrio_dez.php";
+?>
+
+
 	</main>
 
 	<?php include_once "blocks/footer.php";

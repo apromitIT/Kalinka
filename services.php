@@ -12,11 +12,15 @@
 					<p>
 					Мы навсегда избавим Ваши помещения от грызунов, бытовых насекомых, комаров и болезнетворных микроорганизмов.
 					</p>
-					<a href="#"><img src="src/logo_akfo.svg" alt=""></a>
+					<!-- <a href="#"><img src="src/logo_akfo.svg" alt=""></a> -->
 					<a href="#"><img src="src/logo_nod.svg" alt=""></a>
 				</div>
 			</div>
 		</section>
+
+		<?php include_once "blocks/thrio_dez.php";
+?>
+
 	</main>
 <?php include_once "blocks/footer.php";
 ?>

@@ -19,7 +19,7 @@
 		<div class="container">
 			<a href="/" class="logo-dez"><img src="src/logo_dez.svg" alt="логотип компании по дезинфекции, дезинсекции, дератизации Калинка_ДЕЗ"></a>
 			<nav class="nav-bar"><ul>
-				<li><a href="/">Главная</a></li>
+				<!-- <li><a href="/">Главная</a></li> -->
 				<li><a href="#">О компании</a></li>
 				<li><a href="services.php">Услуги</a></li>
 				<li><a href="#">Сертификаты</a></li>
