@@ -7,7 +7,8 @@
 			<div class="container">
 				<div class="intro-content">
 					<h1 class="title">Профессиональная дезинфекция, дератизация и дезинсекция</h1>
-					<a href="#" class="btn btn-cta">Заказать обратный звонок</a>
+					<!-- <button class="btn btn-cta">Заказать обратный звонок</button> -->
+					<a href="form/form.php" class="btn btn-cta">Заказать обратный звонок</a>
 					<a href="#" class="btn btn-cta">Заказать срочную обработку</a>
 					<p>
 						Солидный и уважаемый заказчик всегда в праве рассчитывать на сотрудничество с надежным и профессиональным партнером.
@@ -17,6 +18,17 @@
 				</div>
 			</div>
 		</section> <!-- intro -->
+		<div class="icons-bar">
+			<div class="container">
+				<ul>
+					<li class="icon-time">Обработка в любое время!</li>
+					<li class="icon-contract">Заключаем договоры</li>
+					<li class="icon-act">Составляем акты выполненных работ</li>
+					<li class="icon-fast">Принимаем срочные вызовы!</li>
+				</ul>
+			</div>
+		</div> <!-- icons-bar -->
+		
 
 		<?php include_once "blocks/thrio_dez.php";
 ?>
