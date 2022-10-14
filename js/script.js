@@ -7,10 +7,10 @@ new Swiper(".swiper", {
 	// slidesPerColumn: 1,
 	centeredSlides: true,
 	// spaceBetween: 30,
-	// autoplay: {
-	// 		delay: 2500,
-	// 		disableOnInteraction: false,
-	// 	},
+	autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
