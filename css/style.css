@@ -282,20 +282,16 @@ header .container {
 }
 
 .icons-bar li {
-	padding-left: 45px;
-	max-width: 187px;
-	min-height: 33px;
+	display: grid;
 	align-content: center;
+	padding-left: 45px;
+	/* max-width: 187px; */
+	min-height: 33px;
 }
 
 .icons-bar ul li:last-child {
 	padding-left: 70px;
 	max-width: 190px;
-}
-
-.p-contract {
-	padding-top: 5%;
-	
 }
 
 .icon-time {
@@ -531,13 +527,13 @@ header .container {
 .swiper-slide.swiper-slide-prev {
 	transform: scale(.9);
 	opacity: 60%;
-	left: 5%;
+	left: 0%;
 }
 
 .swiper-slide.swiper-slide-next {
 	transform: scale(.9);
 	opacity: 60%;
-	left: -5%;
+	left: 0%;
 	/* top: 5%; */
 }
 
@@ -549,7 +545,7 @@ header .container {
 
 .swiper-button-prev {
 	top: 45%;
-	left: 25%;
+	left: 20%;
 	background-image: url('../src/arrow-prev-icon.png');
 	width: 80px;
 	height: 80px;
@@ -557,7 +553,7 @@ header .container {
 
 .swiper-button-next {
 	top: 45%;
-	right: 25%;
+	right: 20%;
 	background-image: url('../src/arrow-next-icon.png');
 	width: 80px;
 	height: 80px;
@@ -715,15 +711,14 @@ footer {
 	
 	}
 
-
 	.logo-dez img {
 		width: 100%;
 		margin-bottom: 5%;
 	}
 
 	.nav-bar ul {
-		min-width: 80%;
-		font-size: 12px;
+		min-width: 470px;
+		font-size: 14px;
 	}
 	
 	.phone-num {
@@ -756,7 +751,7 @@ footer {
 
 .intro-content p {
 	margin: 8% 0;
-	text-align: justify;
+	text-align: start;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 120%;
@@ -778,19 +773,12 @@ footer {
 /* SLIDER
 ================== */
 
-.swiper-button-next,
+.swiper-button-next {
+	right: 8%;
+}
+
 .swiper-button-prev {
-	display: none;
-}
-
-.swiper-slide.swiper-slide-prev {
-	transform: scale(.9);
-	left: 0%;
-}
-
-.swiper-slide.swiper-slide-next {
-	transform: scale(.9);
-	left: 0%;
+	left: 8%;
 }
 
 
@@ -821,6 +809,12 @@ footer {
 	}
 
 
+	.nav-bar ul {
+		min-width: 390px;
+		font-size: 12px;
+	}
+
+
 	/* ICONS-BAR
 ================== */
 
@@ -832,8 +826,14 @@ footer {
 		font-weight: 500;
 	}
 
-	.p-contract {
-		padding-top: 0;
+
+	.icon {
+		background-size: 20%;
+		background-position: 0 50%
+	}
+	
+	.icon-fast {
+		background-size: 35%;
 	}
 
 
@@ -874,6 +874,10 @@ footer {
 /* SLIDER
 ================== */
 
+.swiper-button-next,
+.swiper-button-prev {
+	display: none;
+}
 
 
 }
@@ -881,15 +885,32 @@ footer {
 
 @media (max-width: 767px) {
 
+	body {
+		font-size: 12px;
+	}
+
 	section {
 		margin-bottom: 50px;
 	}
 
+	.title {
+	margin-bottom: 50px;
+}
+
+	.btn {
+		font-size: 10px;
+		/* padding: 8px 10px; */
+	}
+
+	.order-btns .btn {
+		margin-bottom: 5%;
+	}
+
+
 /* HEADER
 ===================== */
-
-.title {
-	margin-bottom: 50px;
+header .container {
+	justify-content: start;
 }
 
 header {
@@ -920,7 +941,6 @@ header {
 		width: 360px;
 
 		min-width: auto;
-
 	}
 
 	.nav-bar li {
@@ -928,7 +948,9 @@ header {
 	}
 
 .phone-num {
-	display: none;
+	position: absolute;
+	margin-left: 29%;
+	font-size: 13px;
 }
 
 
@@ -936,35 +958,93 @@ header {
 ================= */
 
 .intro {
-	background-position: 40% -2%;
-	background-size: 105%;
-	padding-top: 3%;
-	padding-bottom: 0;
+background-image: url("../src/img/banner_serv.jpg");
+	background-position: 37% 15%;
+	background-size: 180%;
+	padding-top: 2%;
+	padding-bottom: 5%;
 }
 
 .intro h1 {
-	margin-bottom: 15%;
-	font-size: 24px;
+	margin-bottom: 17%;
+	font-size: 18px;
 	letter-spacing: 0.08em;
+}
+
+.order-btns {
+	/* align-items: center; */
+}
+
+.intro-content p {
+	text-align: start;
+	font-size: 12px;
+	margin: 5% 0;
 }
 
 
 /* ICONS-BAR
 ================== */
 
-.icons-bar-inner ul {
-	grid-template-columns: repeat(2, 1fr);
-	gap: 3em;
-	font-size: 10px;
+.icons-bar {
+	display: none;
+	border-radius: 0;
 }
 
-.icons-bar-inner p {
-align-items: center;
+.icons-bar li {
+	/* display: grid; */
+
+	padding-left: 40px;
+	max-width: 187px;
+	min-height: 33px;
+	/* align-content: center; */
+	
 }
+
+.icons-bar-inner ul {
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2em;
+	font-size: 10px;
+	justify-items: center;
+}
+
+.icons-bar .icon {
+	background-size: 17%;
+	background-position: 0 50%;
+}
+
+.icons-bar .icon-time {
+	background-size: 20%;
+}
+
+.icons-bar .icon-contract {
+	background-position: 100% 50%;
+	background-size: 22%;
+	padding-left: 0;
+	padding-right: 40px;
+	justify-items: end ;
+}
+
+.icons-bar .icon-fast {
+	background-size: 28%;
+	background-position: 100% 50%;
+	text-align: end;
+}
+
+.icons-bar ul li:last-child {
+	padding-left: 0;
+	padding-right: 60px;
+	max-width: 190px;
+	
+}
+
 
 
 /* three-dez 
 ====================*/
+
+.dez-content h2 {
+	margin-top: 40px;
+}
 
 	.dez-items {
 		flex-direction: column;
@@ -974,6 +1054,53 @@ align-items: center;
 		max-width: 100%;
 		margin-bottom: 20px;
 	}
+
+	.dez-icon,
+	.dez-item p {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.dez-item p {
+		width: 95%;
+		padding-bottom: 5%;
+	}
+
+
+
+/* SLIDER
+===================== */
+
+.swiper-container {
+	max-width: 360px;
+	/* max-height: 256px; */
+
+}
+
+.swiper-slide.swiper-slide-active {
+	width: 100%;
+}
+
+.slider-item {
+	width: 100%;
+	padding: 25px 0;
+	margin-bottom: 20px;
+	border-radius: 0px;
+}
+
+.slider-img {
+	max-width: 100%;
+	margin-bottom: 25px;
+	border-radius: 5px;
+}
+
+.slider-news {
+	width: 90%;
+	/* padding-left: 5%;
+	padding-right: 5%; */
+}
+
+
 
 /* PARTNERS
 ===================== */
@@ -992,24 +1119,73 @@ align-items: center;
 	}
 
 	.logo-akfo {
-		width: 115px;
+		width: 110px;
 	}
 
 	.logo-metro {
 		width: 130px;
-		height: 30px;
+		height: 25px;
 	}
 
 	.logo-5ka {
-		width: 55px;
+		width: 50px;
 	}
 
 	.logo-vkusvill {
-		width: 135px;
+		width: 130px;
 	}
 
 	.logo-nod {
-		width: 55px;
+		width: 52px;
 	}
+
+	 svg.ashan {
+		height: 30px;
+	}
+
+
+	/* FOOTER
+===================== */
+
+.footer-menu {
+	display: grid;
+	grid-template-columns: 1, 1fr;
+	gap: 2em;
+	justify-content: center;
+
+}
+
+.contacts,
+.footer-links li {
+	text-align: center;
+	line-height: 130%;
+}
+
+.footer-links a {
+	padding: 2px 0;
+}
+
+.copyright,
+.footer-btns li,
+.contacts p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contacts :first-child :first-of-type {
+	margin-bottom: 15px;
+}
+
+.footer-btns :first-child :first-of-type {
+	margin-bottom: 10%;
+}
+
+.copyright {
+	width: 80%;
+	font-size: 11px;
+	text-align: center;
+	/* padding-left: 25px;
+	padding-right: 25px; */
+}
 
 }
