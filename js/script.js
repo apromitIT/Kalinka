@@ -1,5 +1,17 @@
 
+document.querySelector('.menu-btn').addEventListener('click', function(e){
+e.preventDefault();
+// this.classList.toggle('');
+if(this.classList.contains('menu-btn_active')) {
+	this.classList.remove('menu-btn_active');
+	document.querySelector('#navBar').classList.remove('nav-bar_active');
+} else {
+	this.classList.add('menu-btn_active');
+	document.querySelector('#navBar').classList.add('nav-bar_active');
+}
+});
 
+//
 
 
 new Swiper(".swiper", {
