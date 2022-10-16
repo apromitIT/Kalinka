@@ -1,7 +1,6 @@
 
-document.querySelector('.menu-btn').addEventListener('click', function(e){
+	document.querySelector('.menu-btn').addEventListener('click', function(e){
 e.preventDefault();
-// this.classList.toggle('');
 if(this.classList.contains('menu-btn_active')) {
 	this.classList.remove('menu-btn_active');
 	document.querySelector('#navBar').classList.remove('nav-bar_active');
@@ -11,10 +10,9 @@ if(this.classList.contains('menu-btn_active')) {
 }
 });
 
-//
 
-
-new Swiper(".swiper", {
+if (document.querySelector(".swiper")) {
+	new Swiper(".swiper", {
 	slidesPerView: 1,
 	// slidesPerColumn: 1,
 	centeredSlides: true,
@@ -37,13 +35,19 @@ new Swiper(".swiper", {
 		1399: {
 			slidesPerView: 2,
 		}
-
 	}
+	});
+}
 
 
-});
+// if(document.querySelector("#aboutPage")) {
+// 	// document.body.prepend(header.innerHTML);
 
-console.log(Swiper);
+
+
+// }
+
+
 
 
 // function loadHtml (id, filename) {
