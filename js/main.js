@@ -9,10 +9,10 @@ class customHeader extends HTMLElement {
 				<ul class="links">
 					<li><a href="/">Главная</a></li>
 					<li><a href="about.html">О компании</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Сертификаты</a></li>
-					<li><a href="#">Вакансии</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="services.html">Услуги</a></li>
+					<li><a href="sertificats.html">Сертификаты</a></li>
+					<li><a href="work.html">Вакансии</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
 			<a href="+7-495-236-01-45" class="phone-num">+7-495-236-01-45</a>
@@ -37,10 +37,10 @@ class customFooter extends HTMLElement {
 						<ul class="footer-links links">
 							<li><a href="/">Главная</a></li>
 							<li><a href="about.html">О компании</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Сертификаты</a></li>
-							<li><a href="#">Новости</a></li>
-							<li><a href="#">Вакансии</a></li>
+							<li><a href="services.html">Услуги</a></li>
+							<li><a href="sertificats.html">Сертификаты</a></li>
+							<li><a href="work.html">Вакансии</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 
 						<ul class="contacts">
