@@ -3,11 +3,11 @@ class customHeader extends HTMLElement {
 		this.innerHTML = `
 		<header>
 		<div class="container">
-			<a href="/" class="logo-dez"><img src="src/logo_dez.svg"
+			<a href="index.html" class="logo-dez"><img src="src/logo_dez.svg"
 					alt="логотип компании по дезинфекции, дезинсекции, дератизации Калинка_ДЕЗ"></a>
 			<nav class="nav-bar" id="navBar">
 				<ul class="links">
-					<li><a href="/">Главная</a></li>
+					<li><a href="index.html">Главная</a></li>
 					<li><a href="about.html">О компании</a></li>
 					<li><a href="services.html">Услуги</a></li>
 					<li><a href="sertificats.html">Сертификаты</a></li>
@@ -35,7 +35,7 @@ class customFooter extends HTMLElement {
 					<div class="footer-menu">
 
 						<ul class="footer-links links">
-							<li><a href="/">Главная</a></li>
+							<li><a href="index.html">Главная</a></li>
 							<li><a href="about.html">О компании</a></li>
 							<li><a href="services.html">Услуги</a></li>
 							<li><a href="sertificats.html">Сертификаты</a></li>
