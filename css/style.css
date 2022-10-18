@@ -808,13 +808,16 @@ margin-bottom: 5%;
 
 .icons-serv li {
 	display: grid;
-	padding-left: 40px;
+	padding-left: 45px;
 align-content: center;
 }
 
+.icons-serv li:last-child {
+	padding-left: 70px;
+}
 
 .icons-serv .icon {
-	height: 36px;
+	height: 40px;
 }
 
 /* SERVICES
