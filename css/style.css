@@ -88,12 +88,6 @@ nav a:hover:after,
 }
 
 
-/* .logo_akfo {
-	background-image: url('../src/logo_akfo.svg');
-} */
-
-
-
 /* .menu-btn a:hover:after,
 .menu-btn a:after {
 	display: none;
@@ -1016,6 +1010,63 @@ margin-right: auto;
 border-radius: 10px;
 }
 
+
+/* POPUP
+===========================  */
+#popupCall {
+	display: none;
+}
+
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+z-index: 1001;	
+	/* margin: 1.75rem auto; */
+/* margin-left: auto;
+margin-right: auto; */
+	
+}
+
+.popup-body {
+	min-width: 360px;
+max-width: 400px;
+	
+
+	margin: 10rem auto;
+background: linear-gradient(140deg, rgba(151, 223, 251, 0.267) 5%, rgba(26, 55, 78, 0.504) 50.27%), linear-gradient(90.32deg, rgba(255, 253, 253, 0.1) 20.05%, rgba(0, 0, 0, 0.296) 44.53%), rgba(255, 255, 255, 0.20);
+	filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.55));
+	backdrop-filter: blur(10px);
+
+border-radius: 8px;
+}
+
+.form-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+padding: 5%;
+padding-bottom: 15%;
+}
+
+.form-title {
+	margin-bottom: 15%;
+}
+
+.form-body p {
+	width: 60%;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.form-item {
+margin-bottom: 10%;
+
+	
+}
 
 
 /* MEDIA
