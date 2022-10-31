@@ -1,8 +1,9 @@
 :root {
-	font-size: 16px;
+	/* font-size: 16px; */
 	--mainColor: #FFFDFA;
 	--transColor: rgba(255, 255, 255, .3);
 	--mainRed: rgba(254, 77, 77);
+	--mainBrightColdColor: rgba(0, 146, 255, 0.9);
 
 }
 
@@ -96,7 +97,7 @@ nav a:hover:after,
 
 
 section {
-	margin-bottom: 140px;
+	margin-bottom: 120px;
 }
 
 .menu-btn {
@@ -172,7 +173,7 @@ section {
 }
 
 .title {
-	margin-bottom: 100px;
+	/* margin-bottom: 100px; */
 	text-transform: uppercase;
 }
 
@@ -190,6 +191,7 @@ h3 {
 }
 
 h2 {
+	margin-bottom: 70px;
 	font-weight: 700;
 	font-size: 24px;
 }
@@ -199,6 +201,13 @@ h3 {
 	font-weight: 600;
 	font-size: 18px;
 	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.1rem;
+	margin-bottom: 15px;
+	color: var(--mainBrightColdColor);
+	text-align: center;
 }
 
 
@@ -240,6 +249,12 @@ header .container {
 	margin-bottom: 18px;
 }
 
+.phone-links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .phone-num {
 	font-size: 20px;
 	font-weight: 700;
@@ -249,6 +264,22 @@ header .container {
 
 .phone-num:hover {
 	color: var(--mainRed);
+}
+
+.call-back {
+	font-size: .92rem;
+	padding: 0;
+	text-decoration: none;
+	color: var(--mainRed);
+	border-bottom: 1px dotted var(--mainRed);
+	transition: all .4s;
+}
+
+.call-back:hover {
+	padding: 0;
+	color: var(--mainBrightColdColor);
+	border-bottom: none;
+	border-bottom: 1px dashed transparent;
 }
 
 /* INTRO
@@ -296,8 +327,12 @@ header .container {
 
 .logo-intro {
 	width: 65%;
-}
+	transition: all 0.4s;
+	}
 
+	.logo-intro:hover {
+		scale: 1.05;
+	}
 
 /* ICONS-BAR
 ================== */
@@ -431,7 +466,7 @@ z-index: -10;
 	height: 130px;
 	width: 130px;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	/* background-position: 50% 20%; */
@@ -463,6 +498,8 @@ z-index: -10;
 .section .container-fluid {
 	width: 100%;
 }
+
+
 
 .swiper {
 	width: 100%;
@@ -704,9 +741,9 @@ footer {
 }
 
 .contacts b {
-	font-size: 13px;
+	/* font-size: 1rem; */
 	font-weight: 600;
-
+	color: var(--mainRed);
 }
 
 .order-btns.footer-btns {
@@ -944,6 +981,10 @@ background-image: url('../src/img/sert_3\ 77.01.16.000.М.004318.06\ 1.jpg');
 	margin-bottom: 0;
 }
 
+.section-work .title {
+	margin-bottom: 40px;
+}
+
 .work-inner ul {
 	margin-bottom: 6%;
 }
@@ -1019,6 +1060,7 @@ border-radius: 10px;
 
 
 .popup {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1026,8 +1068,6 @@ border-radius: 10px;
 	bottom: 0;
 z-index: 1001;	
 	/* margin: 1.75rem auto; */
-/* margin-left: auto;
-margin-right: auto; */
 	
 }
 
@@ -1080,8 +1120,13 @@ margin-bottom: 10%;
 		line-height: 120%;
 	}
 
+	section {
+		margin-bottom: 70px;
+	}
+
 	h2 {
 		font-size: 20px;
+		margin-bottom: 45px;
 	}
 
 	.btn {
@@ -1157,6 +1202,10 @@ margin-bottom: 10%;
 		width: 100%;
 	}
 
+	.dez-icon {
+		margin-top: 30px;
+	}
+
 
 	/* SLIDER
 ================== */
@@ -1217,18 +1266,29 @@ margin-bottom: 10%;
 	}
 
 	section {
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 	}
 
 	.title {
-		margin-bottom: 70px;
+		margin-bottom: 40px;
 	} 
 
+
+	/* HEADER
+===================== */
+
 	.nav-bar ul {
-		min-width: 390px;
+		min-width: 350px;
 		font-size: 12px;
 	}
 
+	.nav-bar ul li:first-child {
+		display: none;
+	}
+
+	.call-back {
+		font-size: .8rem;
+	}
 
 	/* ICONS-BAR
 ================== */
@@ -1384,11 +1444,15 @@ background-size: cover;
 	}
 
 	section {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 
 	.title {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
+	}
+
+	.slider-news h4 {
+		margin-bottom: 10px;
 	}
 
 	.btn {
@@ -1410,8 +1474,6 @@ background-size: cover;
 	header {
 		height: fit-content;
 	}
-
-
 
 	.nav-bar {
 		position: fixed;
@@ -1454,9 +1516,9 @@ background-size: cover;
 		margin-bottom: 10px;
 	}
 
-	.phone-num {
+	.phone-links {
 		display: none;
-		font-size: 13px;
+		/* font-size: 13px; */
 	}
 
 	.menu-btn {
@@ -1662,6 +1724,10 @@ background-size: cover;
 
 	}
 
+	footer .contacts {
+		font-size: 12px;
+	}
+
 	.contacts,
 	.footer-links li {
 		text-align: center;
@@ -1694,9 +1760,6 @@ background-size: cover;
 		/* padding-left: 25px;
 	padding-right: 25px; */
 	}
-
-
-
 
 	.img-about {
 		width: 100%;

@@ -15,7 +15,10 @@ class customHeader extends HTMLElement {
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
+			<div class="phone-links">
 			<a href="+7-495-236-01-45" class="phone-num">+7-495-236-01-45</a>
+			<a href="#" class="call-back">Заказать обратный звонок</a>
+			</div><!-- /phone-links -->
 			<a href="#" class="menu-btn">
 				<span></span>
 			</a>
@@ -65,7 +68,7 @@ class customFooter extends HTMLElement {
 
 						<ul class="order-btns footer-btns">
 							<li><a href="#" class="btn btn-cta">Заказать обратный звонок</a></li>
-							<li><a href="#" class="btn btn-cta">Заказать срочную обработку</a></li>
+							<li><a href="#" class="btn btn-cta">Заказать обработку</a></li>
 						</ul>
 
 					</div><!-- /footer-menu-->
