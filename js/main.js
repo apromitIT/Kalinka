@@ -17,7 +17,7 @@ class customHeader extends HTMLElement {
 			</nav>
 			<div class="phone-links">
 			<a href="+7-495-236-01-45" class="phone-num">+7-495-236-01-45</a>
-			<a href="#" class="call-back">Заказать обратный звонок</a>
+			<a href="#" class="call-back" data-bs-toggle="modal" data-bs-target="#callBackModal">Заказать обратный звонок</a>
 			</div><!-- /phone-links -->
 			<a href="#" class="menu-btn">
 				<span></span>
@@ -67,8 +67,8 @@ class customFooter extends HTMLElement {
 						</ul>
 
 						<ul class="order-btns footer-btns">
-							<li><a href="#" class="btn btn-cta">Заказать обратный звонок</a></li>
-							<li><a href="#" class="btn btn-cta">Заказать обработку</a></li>
+							<li><a href="#" data-bs-toggle="modal" data-bs-target="#callBackModal" class="btn btn-cta">Заказать обратный звонок</a></li>
+							<li><a href="#" data-bs-toggle="modal" data-bs-target="#orderModal" class="btn btn-cta">Заказать обработку</a></li>
 						</ul>
 
 					</div><!-- /footer-menu-->

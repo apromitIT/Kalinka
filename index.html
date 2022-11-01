@@ -15,10 +15,14 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" defer></script>
+
 </head>
-<script type="module" src="js/main.js"></script>
 
 <body>
+	<script type="module" src="js/main.js"></script>
 	<custom-header></custom-header>
 
 	<main>
@@ -30,7 +34,8 @@
 						<!-- <button class="btn btn-cta">Заказать обратный звонок</button> -->
 						<ul class="order-btns">
 							<!-- <li><a href="#" class="btn btn-cta">Заказать обратный звонок</a></li> -->
-							<li><a href="#" class="btn btn-cta">Заказать срочную обработку</a></li>
+							<li><a href="#" data-bs-toggle="modal" data-bs-target="#rushOrderModal" class="btn btn-cta">Заказать
+									срочную обработку</a></li>
 						</ul>
 
 
@@ -40,16 +45,15 @@
 						</p>
 						<a href="https://xn--80aumx.xn--p1ai" target="_blank">
 							<div>
-								<img class="logo-intro" src="src/logo_akfo.svg"
-								alt="">
-							</div>								
-							</a>
+								<img class="logo-intro" src="src/logo_akfo.svg" alt="">
+							</div>
+						</a>
 
 						<a href="https://www.nod.su" target="_blank">
 							<div>
 								<img class="logo-intro" src="src/logo_nod.svg" alt="">
 							</div>
-						
+
 						</a>
 					</div>
 
@@ -113,7 +117,8 @@
 						</div>
 					</div>
 				</div>
-			</div><!--/ container  -->
+			</div>
+			<!--/ container  -->
 		</section>
 
 		<section class="section">
@@ -226,64 +231,114 @@
 	<custom-footer></custom-footer>
 
 
+	<!-- Модальное окно звонок-->
+	<div class="modal fade" id="callBackModal" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title form-title" id="staticBackdropLabel">Заказать обратный звонок</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<p>Мы перезвоним Вам,<br>как только получим заявку</p>
+					<form action="#" id="formCall" class="form-body">
+						<div class="form-item">
+							<label for="formName" class="form-label">Ваше имя <span>*</span></label>
+							<input id="formName" type="text" name="name" class="form-input" required>
+						</div>
+						<div class="form-item">
+							<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
+							<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						</div>
 
-	<div id="popupCall" class="popup">
-		<div class="popup-body">
-			<div class="popup-content">
-	<form action="#" id="formCall" class="form-body">
-
-	<h3 class="title form-title">Заказать обратный звонок</h3>
-	<p>Мы перезвоним Вам, как только получим заявку</p>
-
-	<div class="form-item">
-		<label for="formName" class="form-label"></label>
-	<input id="formName" type="text" name="name" class="form-input" placeholder="Ваше имя:*">
-	</div>
-	<div class="form-item">
-		<label for="formPhonNum" class="form-label"></label>
-	<input id="formPhonNum" type="tel" name="Phon number" class="form-input" placeholder="+7-999-777-77-77*">
-	</div>
-
-	<button type="submit" class="btn btn-cta">Перезвонить мне</button>
-	</form>
-	
-			</div>
-		</div>
-	</div>
-	
-	<div id="popupOrder" class="popup">
-		<div class="popup-body">
-			<div class="popup-content">
-				<form action="#" id="formCall" class="form-body">
-
-					<h3 class="title form-title">Заказать обработку</h3>
-					<p>Мы перезвоним Вам, как только получим заявку</p>
-
-					<div class="form-item">
-						<label for="formName" class="form-label"></label>
-					<input id="formName" type="text" name="name" class="form-input" placeholder="Ваше имя:*">
-					</div>
-					<div class="form-item">
-						<label for="formPhonNum" class="form-label"></label>
-					<input id="formPhonNum" type="tel" name="Phon number" class="form-input" placeholder="+7-999-777-77-77*">
-					</div>
-					<div class="form-item">
-						<label for="formName" class="form-label" ></label>
-					<input id="formWork" type="text" name="work" class="form-input" placeholder="Вид работ или описание проблемы (не обязательно"	>
-					</div>
-				
-					<button type="submit" class="btn btn-cta">Отправить заявку</button>
+						<button type="submit" class="btn btn-cta">Перезвонить мне</button>
 					</form>
-	
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- /Модальное окно звонок-->
+
+	<!-- Модальное окно обработка-->
+	<div class="modal fade" id="orderModal" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title form-title" id="staticBackdropLabel">Заказать обработку</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<p>Мы перезвоним Вам,<br>как только получим заявку</p>
+					<form action="#" id="formCall" class="form-body">
+						<div class="form-item">
+							<label for="formName" class="form-label">Ваше имя <span>*</span></label>
+							<input id="formName" type="text" name="name" class="form-input" required>
+						</div>
+						<div class="form-item">
+							<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
+							<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						</div>
+						<div class="form-item">
+							<label for="work" class="form-label">Вид работ</label>
+							<textarea id="formWork" type="text" name="work" class="form-input"
+								placeholder="Вид работ или описание проблемы (не обязательно)"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-cta">Отправить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Модальное окно обработка -->
+
+	<!-- Модальное окно срочная обработка-->
+	<div class="modal fade" id="rushOrderModal" data-bs-keyboard="true" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title form-title" id="staticBackdropLabel"> Заказать обработку срочно!</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<p>Мы перезвоним Вам,<br>как только получим заявку</p>
+					<form action="#" id="formCall" class="form-body">
+						<div class="form-item">
+							<label for="formName" class="form-label">Ваше имя <span>*</span></label>
+							<input id="formName" type="text" name="name" class="form-input" required>
+						</div>
+						<div class="form-item">
+							<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
+							<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						</div>
+						<div class="form-item">
+							<label for="email" class="form-label">Email</label>
+							<input id="" type="text" name="email" class="form-input modal-email" pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" required>
+						</div>
+						<div class="form-item">
+							<label for="work" class="form-label">Вид работ</label>
+							<textarea id="formWork" type="text" name="work" class="form-input"
+								placeholder="Вид работ или описание проблемы (не обязательно)"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-cta btn-rush">Срочная заявка</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Модальное окно срочная обработка -->
 
 
-		<script type="module" src="js/smoothscroll.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
-		<script src="js/swiper-bundle.min.js"></script>
-		<script type="module" src="js/script.js"></script>
+	<script type="module" src="js/smoothscroll.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+		integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script type="module" src="js/script.js" defer></script>
 </body>
 
 </html>

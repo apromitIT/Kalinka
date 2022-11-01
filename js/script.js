@@ -1,5 +1,5 @@
 
-
+$(".modal-phone").mask("+7(999) 999-99-99");
 
 	document.querySelector('.menu-btn').addEventListener('click', function(e){
 e.preventDefault();
