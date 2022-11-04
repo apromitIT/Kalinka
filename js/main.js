@@ -16,7 +16,7 @@ class customHeader extends HTMLElement {
 				</ul>
 			</nav>
 			<div class="phone-links">
-			<a href="+7-495-236-01-45" class="phone-num">+7-495-236-01-45</a>
+			<a href="tel:+7-495-236-01-45" class="phone-num">+7-495-236-01-45</a>
 			<a href="#" class="call-back" data-bs-toggle="modal" data-bs-target="#callBackModal">Заказать обратный звонок</a>
 			</div><!-- /phone-links -->
 			<a href="#" class="menu-btn">
