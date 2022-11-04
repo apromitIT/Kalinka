@@ -3,7 +3,7 @@ class customHeader extends HTMLElement {
 		this.innerHTML = `
 		<header>
 		<div class="container">
-			<a href="index.html" class="logo-dez"><img src="src/logo_dez.svg"
+			<a href="index.html" class="logo-dez"><img src="img/logo_dez.svg"
 					alt="логотип компании по дезинфекции, дезинсекции, дератизации Калинка_ДЕЗ"></a>
 			<nav class="nav-bar" id="navBar">
 				<ul class="links">
