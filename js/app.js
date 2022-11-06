@@ -45,75 +45,130 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const formCall = document.forms.formCall;
 	// formCall.addEventListener('submit', formSend);
-	const btnCallBack = formCall.querySelector('.btn-cta');
+	// const btnCallBack = formCall.querySelector('.btn-cta');
 	// const inputsCallBack = formCall.querySelectorAll('input');
 	const formOrder = document.forms.formOrder;
-	const btnOrder = formOrder.querySelector('.btn-cta');
+	// const btnOrder = formOrder.querySelector('.btn-cta');
 	const formRushOrder = document.forms.formRushOrder;
-	const btnRushOrder = formRushOrder.querySelector('.btn-cta');
+	// const btnRushOrder = formRushOrder.querySelector('.btn-cta');
 
 	// console.log(formCall.email);
+		let formData = new FormData(formCall);
+	$('#formCall').bind('click', function(){
 
-	btnCallBack.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formCall);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-callback').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	btnOrder.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formOrder);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-order').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	btnRushOrder.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formRushOrder);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-order').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	if(document.querySelectorAll('.close-message')){
-		for(let btn of document.querySelectorAll('.close-message')) {
-		btn.addEventListener('click', function(){
-			for (let div of document.querySelectorAll('.message-send-modal')) {
-				div.style.display = "none";
-				setTimeout(() => div.remove(), 1300);
-			}			
+		$.ajax({
+			url: 'sendmail.php',
+			type: 'POST',
+			data: ({ data: formData }),
+			dataType: 'html',
+			beforeSend: setLoadig,
+			success: setSuccess
 		});
-	}
-	}
 
-	// $(document).on('click', '#closeMessage', function(){
-	// 	// let messageModal = "";
-	// 	$.ajax ( {
+	});
+
+
+	// async function formSend(formCall) {
+	// 	formValidate(formCall);
+	// 	let formData = new FormData(formCall);
+	// 	$.ajax({
 	// 		url: 'sendmail.php',
 	// 		type: 'POST',
-	// 		data: ({sendSuccess: ''}),
-	// 		dataType: 'html'
+	// 		data: ({ data: formData }),
+	// 		dataType: 'html',
+	// 		beforeSend: setLoadig,
+	// 		success: setSuccess
 	// 	});
 
-	// })
+	// }
+
+	function setLoadig() {
+		$("#sending").show();
+		// for (let elem of document.querySelectorAll('.content-callback')) {
+		// 	elem.classList.add('_sending');
+		// }
+
+	}
+
+	function setSuccess(data) {
+		$("#sending").hide();
+		$("#information").text(data);
+		// for (let elem of document.querySelectorAll('.form-body')) {
+		// 	elem.reset();
+		// }
+		// let div = document.createElement('div');
+		// div.classList.add('.message-send-modal');
+		// div.innerHTML = `
+		// <div class='message-send'>
+		// <button type='button' id='closeMessage'  class='btn-close close-message' aria-label='Закрыть'></button>
+		// <p>Письмо отправленно!</p>
+		// </div>
+		// `;
+		// document.body.prepend(div);
+		// setTimeout(() => div.remove, 3000);
+
+
+	}
+
+	// btnCallBack.addEventListener('click', function () {
+	// 	// e.preventDefault();
+	// 	formValidate(formCall);
+
+	// 	// if (error === 0) {
+	// 	// 	console.log(error);
+	// 	// 	document.querySelector('.content-callback').classList.add('_sending');
+	// 	// } else {
+	// 	// 	console.log(error);
+	// 	// 	// alert('ERROR');
+	// 	// }
+	// });
+
+	// btnOrder.addEventListener('click', function () {
+	// 	// e.preventDefault();
+	// 	formValidate(formOrder);
+
+	// 	// if (error === 0) {
+	// 	// 	console.log(error);
+	// 	// 	document.querySelector('.content-order').classList.add('_sending');
+	// 	// } else {
+	// 	// 	console.log(error);
+	// 	// 	// alert('ERROR');
+	// 	// }
+	// });
+
+	// btnRushOrder.addEventListener('click', function () {
+	// 	// e.preventDefault();
+	// 	formValidate(formRushOrder);
+
+	// 	// if (error === 0) {
+	// 	// 	console.log(error);
+	// 	// 	document.querySelector('.content-order').classList.add('_sending');
+	// 	// } else {
+	// 	// 	console.log(error);
+	// 	// 	// alert('ERROR');
+	// 	// }
+	// });
+
+	if (document.querySelectorAll('.close-message')) {
+		for (let btn of document.querySelectorAll('.close-message')) {
+			btn.addEventListener('click', function () {
+				for (let div of document.querySelectorAll('.message-send')) {
+					div.remove();
+				}
+			});
+		}
+	}
+
+	$(document).on('click', '#closeMessage', function () {
+		// let messageModal = "";
+		$.ajax({
+			url: 'sendmail.php',
+			type: 'POST',
+			data: ({ sendSaccess: '' }),
+			dataType: 'html'
+		});
+
+	})
 
 	// 	function formValidate(form) {
 	// 		let error = 0;
@@ -126,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	}
 
 	function formValidate(form) {
-			for (let input of form.querySelectorAll('input')) {
+		for (let input of form.querySelectorAll('input')) {
 			if (input.value == "") {
 				if (input.hasAttribute('required')) {
 					input.classList.add('empty');

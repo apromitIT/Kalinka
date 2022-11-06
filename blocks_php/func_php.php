@@ -1,0 +1,3 @@
+<?php
+// global $loading;
+// $loading = '';

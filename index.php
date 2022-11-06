@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once("blocks_php/header.php");
 	?>
 
@@ -64,72 +65,10 @@
 
 <?php
 	require_once("blocks_php/dez_services.php");
+	require_once("blocks_php/news.php");
 	?>
 
 
-	<section class="section">
-		<div class="container-fluid">
-			<div class="row">
-				<h2 class="title">новости</h2>
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="slider-item">
-								<div class="slider-cover"></div>
-								<div class="slider-img">
-									<img src="img/news_1.jpg" alt="">
-								</div>
-								<div class="slider-news">
-									<h4 class="title">награждены</h4>
-									<p>За вклад в развитие потребительского рынка и услуг города Москвы и в связи с пятилетием компании,
-										коллектив ООО "Калинка-ДЕЗ" награжден благодарственным письмом Департамента потребительского рынка
-										и
-										услуг г. Москвы.</p>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="slider-item">
-								<div class="slider-cover"></div>
-								<div class="slider-img">
-									<img src="img/news_2.jpg" alt="">
-								</div>
-								<div class="slider-news">
-									<h4 class="title">опасность насекомых</h4>
-									<p>Насекомые могут проникать в самые разные места, так как ведут себя очень скрытно, поэтому о
-										наличии тараканов в доме можно узнать, только когда они начинают активно размножаться.
-										При этом они могут появиться в любом месте, даже в тех, где их никогда не было.</p>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="slider-item">
-								<div class="slider-cover"></div>
-								<div class="slider-img">
-									<img src="img/news_3.jpg" alt="">
-
-								</div>
-								<div class="slider-news">
-									<h4 class="title">Дезинфекция рук очень важна</h4>
-									<p>Потому что именно на них мы чаще всего касаемся различных объектов.
-										Поэтому прежде чем приступить к работе, необходимо подготовить руки.
-										Для этого необходимо вымыть их с мылом под проточной водой.
-										После чего обработать дезинфицирующим средством.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div><!-- /swiper-wrapper -->
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
-
-				</div><!-- /swiper -->
-			</div><!--	 /row -->
-		</div><!--  /container-fluid -->
-
-	</section>
-<!-- /slider -->
 
 	<section class="section-partners">
 		<div class="container container-fluid">

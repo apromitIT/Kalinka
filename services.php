@@ -11,7 +11,7 @@
 					<!-- <button class="btn btn-cta">Заказать обратный звонок</button> -->
 					<ul class="order-btns">
 						<!-- <li><a href="#" class="btn btn-cta">Заказать обратный звонок</a></li> -->
-						<li><a href="#" class="btn btn-cta">Заказать обработку</a></li>
+						<li><a href="#" class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#orderModal">Заказать обработку</a></li>
 					</ul>
 
 					<p>
