@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-	$(".modal-phone").mask("+7(999) 999-99-99");
 
 	document.querySelector('.menu-btn').addEventListener('click', function (e) {
 		e.preventDefault();
@@ -43,87 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	const formCall = document.forms.formCall;
-	// formCall.addEventListener('submit', formSend);
-	const btnCallBack = formCall.querySelector('.btn-cta');
-	// const inputsCallBack = formCall.querySelectorAll('input');
-	const formOrder = document.forms.formOrder;
-	const btnOrder = formOrder.querySelector('.btn-cta');
-	const formRushOrder = document.forms.formRushOrder;
-	const btnRushOrder = formRushOrder.querySelector('.btn-cta');
 
-	// console.log(formCall.email);
-
-	btnCallBack.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formCall);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-callback').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	btnOrder.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formOrder);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-order').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	btnRushOrder.addEventListener('click', function() {
-		// e.preventDefault();
-		formValidate(formRushOrder);
-
-		// if (error === 0) {
-		// 	console.log(error);
-		// 	document.querySelector('.content-order').classList.add('_sending');
-		// } else {
-		// 	console.log(error);
-		// 	// alert('ERROR');
-		// }
-	});
-
-	if(document.querySelectorAll('.close-message')){
-		for(let btn of document.querySelectorAll('.close-message')) {
-		btn.addEventListener('click', function(){
-			for (let div of document.querySelectorAll('.message-send-modal')) {
-				div.style.display = "none";
-				setTimeout(() => div.remove(), 1300);
-			}			
-		});
-	}
-	}
-
-	// $(document).on('click', '#closeMessage', function(){
-	// 	// let messageModal = "";
-	// 	$.ajax ( {
-	// 		url: 'sendmail.php',
-	// 		type: 'POST',
-	// 		data: ({sendSuccess: ''}),
-	// 		dataType: 'html'
+	// if(document.querySelectorAll('.close-message')){
+	// 	for(let btn of document.querySelectorAll('.close-message')) {
+	// 	btn.addEventListener('click', function(){
+	// 		for (let div of document.querySelectorAll('.message-send-modal')) {
+	// 			div.style.display = "none";
+	// 			setTimeout(() => div.remove(), 1300);
+	// 		}			
 	// 	});
+	// }
+	// }
 
-	// })
-
-	// 	function formValidate(form) {
-	// 		let error = 0;
-	// 		error = checkInputsReq(form);
-	// 		if (form.email != undefined) {
-	// 			error += checkEmail(form);
-	// 			error += checkTextarea(form);
-	// 		}
-	// return error;
-	// 	}
 
 	function formValidate(form) {
 			for (let input of form.querySelectorAll('input')) {
@@ -167,35 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		// }
 		// console.log(error);
 	}
-
-
-
-	// async function formSend(e) {
-	// 	e.preventDefault();
-
-	// 	let error = 0;
-	// 	error += formValidate(formCall);
-	// 	// let formData = new FormData(formCall);
-
-	// 	if (error === 0) {
-	// 		document.querySelector('.content-callback').classList.add('_sending');
-	// 		// let response = await fetch('sendmail.php', {
-	// 		// 	method: 'POST',
-	// 		// 	body: formData
-	// 		// });
-	// 		// if(response.ok){
-	// 		// 	let result = await response.json();
-	// 		// 	alert(result.message);
-	// 		// 	form.reset();
-	// 		// } else {
-	// 		// 	alert('error');
-	// 		// }
-	// 	} else {
-	// 		console.log(error);
-	// 		alert('ERROR');
-	// 	}
-	// }
-
 
 
 
@@ -251,41 +152,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// btnCallBack.addEventListener('click', function () {
-// 	checkInputsReq(inputsCallBack);
-// });
-
-// btnOrder.addEventListener('click', function () {
-// 	checkInputsReq(formOrder.querySelectorAll('input'));
-// 	if (formOrder.email.value != "") {
-// 		checkEmail(formOrder.email);
-// 	}
-// 	checkTextarea(formOrder.work);
-// });
-
-// btnRushOrder.addEventListener('click', function () {
-// 	checkInputsReq(formRushOrder.querySelectorAll('input'));
-// 	if (formRushOrder.email.value != "") {
-// 		checkEmail(formRushOrder.email);
-// 	}
-// 	checkTextarea(formRushOrder.work);
-// });
-
-
-// function checkInputsReq(inputs) {
-// 	for (let input of inputs) {
-// 		if (input.value == "") {
-// 			if (input.hasAttribute('required')) {
-// 				input.classList.add('empty');
-// 				input.value = 'Заполните обязательные поля';
-// 				setTimeout(() => input.classList.remove('empty'), 1300);
-// 				setTimeout(() => input.value = '', 1300);
-// 			}
-// 		} else if (input.value.length < 3 && input.value.length > 0) {
-// 			input.classList.add('min-length');
-// 			input.value = 'Недостаточное количество символов';
-// 			setTimeout(() => input.classList.remove('min-length'), 1300);
-// 			setTimeout(() => input.value = '', 1300);
-// 		}
-// 	}
-// }

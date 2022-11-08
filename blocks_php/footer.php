@@ -63,6 +63,7 @@
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script type="module" src="js/script.js" defer></script>
+		<script src="js/mail.js" defer></script>
 	</body>
 
 </html>

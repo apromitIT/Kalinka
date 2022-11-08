@@ -1,24 +1,22 @@
-<?php
-require_once("sendmail.php");
-// if(array_key_exists("send", $_SESSION) != TRUE) {
-// $sendSaccess = '';
-// $sendFailed = '';
-//  }// else $sendSaccess = "<div class='message-send-modal'>
-// <div class='message-send'>
-// <button type='button' class='btn-close close-message' aria-label='Закрыть'></button>
-// <p>Письмо отправленно!</p>
-// </div>
-// </div>";
+
+<div class='message-send-modal response-ok' style='display: none'>
+	<div class='message-send'>
+		<p>Письмо отправленно!</p>
+	</div>
+</div>
 
 
-?>
+<div class='message-send-modal response-fail' style="display: none">
+	<div class='message-error'>
+	<!-- <button type='button' id='closeMessage'  class='btn-close close-message' aria-label='Закрыть'></button> -->
+		<p>Что-то пошло не так.</p>
+		<p>Попробуйте еще раз.</p>
+	</div>
+</div>
 
-<div class='message-send-modal'><?=$sendSaccess?></div>
-<div class='message-send-modal'><?=$sendFailed?></div>
-
-
-<img id="sending" src="img/loading.gif" style="display: none" alt="">
-
+<div class="sending-bg" id="sending" style="display: none" >
+<img class="sending-img" src="img/loading.gif"alt="">
+</div>
 <!-- Модальное окно звонок-->
 <div class="modal fade index" id="callBackModal" data-bs-keyboard="true" tabindex="-1"
 	aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -33,11 +31,11 @@ require_once("sendmail.php");
 				<form action="#" id="formCall" class="form-body" method="POST">
 					<div class="form-item">
 						<label for="formName" class="form-label">Ваше имя <span>*</span></label>
-						<input id="formName" type="text" name="name" class="form-input" required>
+						<input id="formName" type="text" name="name" class="form-input _req" required>
 					</div>
 					<div class="form-item">
 						<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
-						<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						<input id="" type="tel" name="modalPhone" class="form-input modal-phone _req" required>
 					</div>
 
 					<button type="submit" class="btn btn-cta">Перезвонить мне</button>
@@ -62,16 +60,15 @@ require_once("sendmail.php");
 				<form action="#" id="formOrder" class="form-body" method="post">
 					<div class="form-item">
 						<label for="formName" class="form-label">Ваше имя <span>*</span></label>
-						<input id="formName" type="text" name="name" class="form-input" required>
+						<input id="formName" type="text" name="name" class="form-input _req" required>
 					</div>
 					<div class="form-item">
 						<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
-						<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						<input id="" type="tel" name="modalPhone" class="form-input modal-phone _req" required>
 					</div>
 					<div class="form-item">
 						<label for="email" class="form-label">Email</label>
-						<input id="" type="text" name="email" class="form-input modal-email"
-							pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$">
+						<input id="" type="text" name="email" class="form-input modal-email">
 					</div>
 					<div class="form-item">
 						<label for="work" class="form-label">Вид работ</label>
@@ -101,16 +98,16 @@ require_once("sendmail.php");
 				<form action="#" id="formRushOrder" class="form-body" method="POST">
 					<div class="form-item">
 						<label for="formName" class="form-label">Ваше имя <span>*</span></label>
-						<input id="formName" type="text" name="name" class="form-input" required>
+						<input id="formName" type="text" name="name" class="form-input _req" required>
 					</div>
 					<div class="form-item">
 						<label for="modalPhone" class="form-label">Телефон <span>*</span></label>
-						<input id="" type="tel" name="modalPhone" class="form-input modal-phone" required>
+						<input id="" type="tel" name="modalPhone" class="form-input modal-phone _req" required>
 					</div>
 					<div class="form-item">
 						<label for="email" class="form-label">Email</label>
 						<input id="" type="text" name="email" class="form-input modal-email"
-							pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$">
+							>
 					</div>
 					<div class="form-item">
 						<label for="work" class="form-label">Вид работ</label>

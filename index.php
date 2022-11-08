@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	require_once("blocks_php/header.php");
 	?>
 
