@@ -1,6 +1,7 @@
 # Верстка дипломного проекта
 
-По курсу Fullstack.
+- макет тут: https://www.figma.com/file/dc8FQZstL1i5r134D100k3/v3-Kalinka-DEZ?node-id=0%3A1
+- сайт тут: http://apromisb.beget.tech/
 
 - Код еще не "причёсан"!;
 
