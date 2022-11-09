@@ -15,13 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (document.querySelector(".swiper")) {
 		new Swiper(".swiper", {
 			slidesPerView: 1,
-			// slidesPerColumn: 1,
 			centeredSlides: true,
-			// spaceBetween: 30,
-			// autoplay: {
-			// 		delay: 4000,
-			// 		disableOnInteraction: false,
-			// 	},
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
@@ -29,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true,
-				// dynamicBullets: true,
-				// dynamicMainBullets: 1,
 			},
 			loop: true,
 

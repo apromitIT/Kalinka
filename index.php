@@ -1,16 +1,15 @@
 <?php
-	require_once("blocks_php/header.php");
+	require_once("blocks_php/header.php"); //Хедер
 	?>
 
 <main>
+
 	<section class="intro">
 		<div class="container">
 			<div class="row">
 				<div class="intro-content col-sm-6 col-7">
 					<h1 class="title">Профессиональная дезинфекция, дератизация и дезинсекция</h1>
-					<!-- <button class="btn btn-cta">Заказать обратный звонок</button> -->
 					<ul class="order-btns">
-						<!-- <li><a href="#" class="btn btn-cta">Заказать обратный звонок</a></li> -->
 						<li><a href="#" data-bs-toggle="modal" data-bs-target="#rushOrderModal" class="btn btn-cta">Заказать
 								срочную обработку</a></li>
 					</ul>
@@ -63,11 +62,9 @@
 	</section> <!-- /icons-bar -->
 
 <?php
-	require_once("blocks_php/dez_services.php");
-	require_once("blocks_php/news.php");
+	require_once("blocks_php/dez_services.php"); //Карточки услуг
+	require_once("blocks_php/news.php"); //Слайдер с новостями
 	?>
-
-
 
 	<section class="section-partners">
 		<div class="container container-fluid">
@@ -111,11 +108,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> <!-- /partners -->
+
 </main>
 
-
-
 <?php
-require_once("blocks_php/modals.php");
-require_once("blocks_php/footer.php");
+require_once("blocks_php/modals.php"); //Формы
+require_once("blocks_php/footer.php");//Футер

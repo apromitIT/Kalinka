@@ -24,20 +24,14 @@ if(isset($_POST)) {
     'X-Mailer' => 'PHP/' . phpversion()
 	);
 
-	sleep(1);
+	sleep(2);
 
 	if(!empty($_POST["name"])) {
 		$message = 'succese';
 	}else {
 		$message = 'filed';
 	}
-
-	// if(mail($to, "Обратный звонок", $message, $headers)) {
-	// 	$message = "<div class='message-send-modal response-ok' style='display: block'><div class='message-send'><p>Письмо отправленно!</p></div></div>";
-	// }else {
-	// 	$message = "<div class='message-send-modal response-ok' style='display: block'><div class='message-error'><p>Что-то пошло не так.</p><p>Попробуйте еще раз.</p></div>";
-	// }
-
+	
 		$response = ['message' => $message];
 
 		header('Content-type: application/json');

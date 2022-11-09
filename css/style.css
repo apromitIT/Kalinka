@@ -1,5 +1,4 @@
 :root {
-	/* font-size: 16px; */
 	--mainColor: #FFFDFA;
 	--transColor: rgba(255, 255, 255, .3);
 	--mainRed: #fe4d4d;
@@ -85,14 +84,6 @@ nav a:hover:after,
 	width: 100%;
 	left: 0;
 }
-
-
-/* .menu-btn a:hover:after,
-.menu-btn a:after {
-	display: none;
-	width: 0;
-} */
-
 
 section {
 	margin-bottom: 120px;
@@ -1280,7 +1271,6 @@ footer {
 
 	body {
 		font-size: 14px;
-		/* line-height: 120%; */
 	}
 
 	section {
@@ -1825,8 +1815,6 @@ footer {
 
 	.swiper-container {
 		max-width: 360px;
-		/* max-height: 256px; */
-
 	}
 
 	.swiper-slide.swiper-slide-active {
@@ -1848,8 +1836,6 @@ footer {
 
 	.slider-news {
 		width: 90%;
-		/* padding-left: 5%;
-	padding-right: 5%; */
 	}
 
 

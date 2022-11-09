@@ -8,7 +8,6 @@
 
 <div class='message-send-modal response-fail' style="display: none">
 	<div class='message-error'>
-	<!-- <button type='button' id='closeMessage'  class='btn-close close-message' aria-label='Закрыть'></button> -->
 		<p>Что-то пошло не так.</p>
 		<p>Попробуйте еще раз.</p>
 	</div>
