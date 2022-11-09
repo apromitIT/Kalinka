@@ -1,7 +1,7 @@
 # Верстка дипломного проекта
 
 - макет тут: https://www.figma.com/file/dc8FQZstL1i5r134D100k3/v3-Kalinka-DEZ?node-id=0%3A1
-- сайт тут: http://apromisb.beget.tech/
+- сайт тут: http://z92659ld.beget.tech/Kalinka/
 
 - Код еще не "причёсан"!;
 
