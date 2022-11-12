@@ -1,9 +1,9 @@
 <?php
 
 $server = 'localhost';
-$username = "apromisb_01";
-$password = "eqsC3o&A";
-$dataBase = "apromisb_01";
+$username = "z92659ld_apromit";
+$password = "Rtyujkl1!";
+$dataBase = "z92659ld_apromit";
 global $mysql;
 $mysql = new mysqli($server, $username, $password, $dataBase);
 
